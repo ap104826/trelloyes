@@ -9,6 +9,7 @@ function App(props) {
   const getCardsForAList = (listIndex) =>
     props.store.lists[listIndex - 1].cardIds.map(id => props.store.allCards[id])
 
+  debugger
   const lists = props.store.lists
     .map((list) => <List key={list.id} header={list.header} cards={getCardsForAList(list.id)}></List>)
   
@@ -32,3 +33,4 @@ function App(props) {
 }
 
 export default App;
+

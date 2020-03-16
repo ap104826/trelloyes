@@ -1,5 +1,5 @@
 export default {
-    store: [
+    lists: [
         {
             id: '1',
             header: 'First list',
