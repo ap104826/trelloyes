@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import Card from './Card'
 
-it('renders without crashing', () =>{
-    const div = document.createElement('div');
-    ReactDOM.render(<Card />, div);
-    ReactDOM.unmountComponentAtNode(div);
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<Card />, div);
+  ReactDOM.unmountComponentAtNode(div);
 });
 
 it('renders the UI as expected', () => {
-    const tree = renderer
-      .create(<Card name="Card" unread={4}/>)
-      .toJSON();
-    expect(tree).toMatchSnapshot();  
-  });
+  const tree = renderer
+    .create(<Card name="Card" title="Any Title" content="Whatever Content" />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
